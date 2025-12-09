@@ -11,10 +11,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Det här är ett startrepo som innehåller vanliga paket och filer du behöver för att köra igång ett nytt projekt.",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-session": "^1.18.2",
     "morgan": "^1.10.1",
     "mysql2": "^3.12.0",
     "nunjucks": "^3.2.4"
@@ -23,5 +24,13 @@
     "jest": "^30.0.5",
     "nodemon": "^3.1.9",
     "supertest": "^7.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowninja71/wsp1-login.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shadowninja71/wsp1-login/issues"
+  },
+  "homepage": "https://github.com/shadowninja71/wsp1-login#readme"
 }

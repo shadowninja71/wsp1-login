@@ -2,7 +2,7 @@ import "dotenv/config"
 import express from "express"
 import nunjucks from "nunjucks"
 import morgan from 'morgan'
-
+import session from "express-session"
 import indexRouter from './routes/index.js'
 
 const app = express()
@@ -20,6 +20,19 @@ app.set('views', './views')
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+app.use(session({
+    secret: "top-secret123-megaS3cuR3",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      sameSite: true,
+      secure: false,
+      maxAge: 1000 * 60 * 60 * 24
+    }
+    
+})
+)
 
 app.use(express.static("public"))
 
